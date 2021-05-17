@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>镇海区行政审批服务中心</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/csh.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/aeaa.css" rel="stylesheet" />
+		<link href="css/styleone.css" rel="stylesheet" />
+	</head>
+	<body onload="startClock()" onunload="stopClock()">
+		<!-- 背景 -->
+		<!-- <div class="bg">
+			<img src="./img/bg.gif" />
+		</div> -->
+
+		<div>
+			<!-- 第一层 -->
+			<div>
+				<!-- 标题 -->
+				<div class="bt">
+					<div class="btone">
+						<img src="./img/btxm.png" />
+					</div>
+				</div>
+				<div id="show">
+					<script>
+						var timerjqs = null;
+				
+						function displayClock(num) { //num是传入的startClock中的动态值
+							if (num < 10) {
+								return "0" + num;
+							} else {
+								return num;
+							}
+						}
+						//停止计时
+						function stopClock() {
+							clearTimeout(timerjqs);
+						}
+						//开始计时
+						function startClock() {
+							var time = new Date();
+							var hours = displayClock(time.getHours()) + ":";
+							var minutes = displayClock(time.getMinutes()) + ":";
+							var seconds = displayClock(time.getSeconds());
+							var myDate = new Date();
+							show.innerHTML = myDate.getFullYear() + "-" + (myDate.getMonth() + 1) + "-" + myDate.getDate() + " " + hours +
+								minutes + seconds;
+							timerjqs = setTimeout("startClock()", 1000);
+						}
+					</script>
+				</div>
+				<!-- 计时器 -->
+			</div>
+			<!-- 第二层 -->
+			<div class="aeaatwo">
+				<!-- 镇海区投资情况 -->
+				<div class="aeaatwotz">
+					<!-- <img src="img/03/aeaatwotz.png" /> -->
+					<!-- 项目总体情况 -->
+					<div class="aeaatwotzsz">
+						<div class="aeaatwotzsz1">镇海区总投资情况</div>
+						<div class="aeaatwotzsz2">450000</div>
+						<div class="aeaatwotzsz3">21000</div>
+					</div>
+					<!-- 历年投资项目数 -->
+					<div class="aeaatwotzszxms" id="aeaatwotzszxms">
+
+					</div>
+					<!-- 历年投资项目金额 -->
+					<div class="aeaatwotzszxmje" id="aeaatwotzszxmje">
+
+					</div>
+				</div>
+				<!-- 投资项目办理情况 -->
+				<div class="aeaatwobl">
+					<!-- <img src="img/03/aeaatwobl.png" /> -->
+					<div class="aeaatwoblsz">
+						<div class="aeaatwoblsz1">投资项目事项办理情况</div>
+						<div class="aeaatwoblsz2">
+							<span style="font-size: 42.5px;color: #00e2ff;">8200</span>
+							<span style="font-size: 18px;color: #00e2ff;">个</span>
+						</div>
+						<div class="aeaatwoblsz3">
+							<span style="font-size: 42.5px;color: #00e2ff;">6</span>
+							<span style="font-size: 18px;color: #00e2ff;">小时</span>
+						</div>
+					</div>
+				</div>
+				<!-- 项目段长制管理情况 -->
+				<div class="aeaatwodcz">
+					<!-- <img src="img/03/aeaatwodcz.png" /> -->
+					<div class="aeaatwodczzt">
+						<div class="aeaatwodcz1">项目段长制管理情况</div>
+						<div class="aeaatwodcz2">
+							<div class="aeaatwodcz2h" style="color: #FFFFFF;">
+								<span class="aeaatwodcz2span0">项目阶段</span>
+								<span class="aeaatwodcz2span1">段长姓名</span>
+								<span class="aeaatwodcz2span2">科室</span>
+								<span class="aeaatwodcz2span3" style="font-size: 12px;">
+									<span
+										style="display: block;float: left;width: 100%;height: 15px;line-height: 15px;margin-left: 2px;margin-top: 1px;">该段正在处理</span>
+									<span
+										style="display: block;float: left;width: 100%;height: 15px;line-height: 15px;margin-left: 1px;margin-top: -1px;">项目数</span>
+								</span>
+								<span class="aeaatwodcz2span4" style="font-size: 12px;">
+									<span
+										style="display: block;float: left;width: 100%;height: 15px;line-height: 15px;margin-left: 2px;margin-top: 1px;">平均审批时长</span>
+									<span
+										style="display: block;float: left;width: 100%;height: 15px;line-height: 15px;margin-left: 2px;margin-top: -2px;">（审批日）</span>
+								</span>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="aeaatwodcz2h" style="color: #00e2ff;">
+								<span class="aeaatwodcz2span0">立项前期</span>
+								<span class="aeaatwodcz2span1">姓名</span>
+								<span class="aeaatwodcz2span2">科室</span>
+								<span class="aeaatwodcz2span3">100</span>
+								<span class="aeaatwodcz2span4">1</span>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="aeaatwodcz2h">
+								<span class="aeaatwodcz2span0">方案审查</span>
+								<span class="aeaatwodcz2span1">姓名</span>
+								<span class="aeaatwodcz2span2">科室</span>
+								<span class="aeaatwodcz2span3">100</span>
+								<span class="aeaatwodcz2span4">1</span>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="aeaatwodcz2h" style="color: #00e2ff;">
+								<span class="aeaatwodcz2span0">施工许可</span>
+								<span class="aeaatwodcz2span1">姓名</span>
+								<span class="aeaatwodcz2span2">科室</span>
+								<span class="aeaatwodcz2span3">100</span>
+								<span class="aeaatwodcz2span4">1</span>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="aeaatwodcz2h">
+								<span class="aeaatwodcz2span0">竣工验收</span>
+								<span class="aeaatwodcz2span1">姓名</span>
+								<span class="aeaatwodcz2span2">科室</span>
+								<span class="aeaatwodcz2span3">100</span>
+								<span class="aeaatwodcz2span4">1</span>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="aeaatwodcz2h" style="color: #00e2ff;">
+								<span class="aeaatwodcz2span0">总体情况</span>
+								<span class="aeaatwodcz2span1">项目总数</span>
+								<span class="aeaatwodcz2span2">2890</span>
+								<span class="aeaatwodcz2span3">400</span>
+								<span class="aeaatwodcz2span4">4</span>
+								<div style="clear: both;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 地图 -->
+				<div class="aeaatwodt">
+					<img src="./img/dt.png" />
+					<div id="dt">
+						<div style="position: absolute;display: none;left: 659px;top: 390px;">
+							<img src="img/1.png" />
+							<b style="display: block;float: left;color: #FFFFFF;position: absolute;top:1px;left: 55px;">
+								<img src="img/xz.png">
+								<b id=""
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									九龙湖镇
+								</b>
+
+							</b>
+						</div>
+						<div style="position: absolute;display: none;left: 1045px;top: 549px;">
+							<img src="img/2.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-30px;left: 18px;">
+								<img src="img/xz.png">
+								<b id=""
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									蛟川街道
+								</b>
+								<span style="display: none;">
+
+								</span>
+							</b>
+						</div>
+						<div style="position: absolute;display: none;left: 852px;top: 522px;">
+							<img src="img/3.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-30px;left: 0px;">
+								<img src="img/xz.png">
+								<b id=""
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									骆驼街道
+								</b>
+							</b>
+						</div>
+						<div style="position: absolute;display: none;left: 897px;top: 374px;">
+							<img src="img/4.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-10px;left: 45px;">
+								<img src="img/xz.png">
+								<b id=""
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									澥浦镇
+								</b>
+							</b>
+						</div>
+						<div style="position: absolute;display: none;left: 1167px;top: 592px;">
+							<img src="img/5.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-70px;left: -10px;">
+								<img src="img/xz.png">
+								<b id=""
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									招宝山街道
+								</b>
+							</b>
+						</div>
+						<div style="position: absolute;display: none;left: 966px;top: 653px;">
+							<img src="img/6.png" />
+							<b style="display: block;float: left;color: #FFFFFF;position: absolute;top:-45px;left: -10px;">
+								<img src="img/xz.png">
+								<b id=""
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									庄市街道
+								</b>
+							</b>
+						</div>
+					</div>
+					
+				</div>
+				<!-- 掌上中介管理情况 -->
+				<div class="aeaatwozszj">
+					<!-- <img src="img/03/aeaatwozszj.png" /> -->
+					<div class="aeaatwozszjzt">
+						<div class="aeaatwozszjzt1">掌上中介管理情况</div>
+						<div class="aeaatwozszjzt2">
+							<b
+								style="font-size: 18px;font-weight: 400;display: block;float: left;line-height: 40px;color: #d7d8d8;">中介机构数</b>
+							<b
+								style="width: 110px;line-height: 42px;font-size: 34px;letter-spacing: 16px;display: block;float: left;margin-left: 26px;overflow: hidden;">099</b>
+							<b
+								style="display: block;float: left;font-size: 18px;font-weight: 400;line-height: 39px;margin-left: 4px;letter-spacing: 2px;color: #d7d8d8;">万个</b>
+						</div>
+						<div class="aeaatwozszjzt3">
+							<b
+								style="font-size: 18px;font-weight: 400;display: block;float: left;line-height: 40px;margin-left: 36px;margin-top: 1px;color: #d7d8d8;">评价数</b>
+							<b
+								style="width: 110px;line-height: 42px;font-size: 34px;letter-spacing: 16px;display: block;float: left;margin-left: 26px;overflow: hidden;">080</b>
+							<b
+								style="display: block;float: left;font-size: 18px;font-weight: 400;line-height: 44px;margin-left: 3px;letter-spacing: 2px;color: #d7d8d8;">万个</b>
+						</div>
+						<div class="aeaatwozszjzt4">
+							<b
+								style="font-size: 18px;font-weight: 400;display: block;float: left;line-height: 40px;color: #d7d8d8;margin-left: 35px;">好评率</b>
+							<b
+								style="width: 110px;line-height: 42px;font-size: 34px;letter-spacing: 16px;display: block;float: left;margin-left: 26px;overflow: hidden;">100</b>
+							<b
+								style="display: block;float: left;font-size: 18px;font-weight: 400;line-height: 39px;margin-left: 4px;letter-spacing: 2px;color: #d7d8d8;">%</b>
+						</div>
+					</div>
+				</div>
+				<!-- 九龙街道历年项目数据 -->
+				<div class="aeaatwoxmsj">
+					<!-- <img src="img/03/aeaatwoxmsj.png" /> -->
+					<div class="aeaatwoxmsjzt">
+						<div class="aeaatwoxmsjzt1"><b id='aeaatwoxmsjzt1'>九龙街道</b><b>历年项目数据</b></div>
+						<div class="aeaatwoxmsjzt2">
+							<div class="securit_bottom">
+								<div class="securit_bottom_table" id="securit_bottom_table">
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<script src="js/jq.js"></script>
+			<script src="js/echarts.min.js"></script>
+			
+			<script src="js/lntzszst.js"></script>
+			<script src="js/lntzxmje.js"></script>
+			<script src="js/ghzst.js"></script>
+			
+			<script src="js/slunbo03.js"></script>
+
+	</body>
+
+</html>

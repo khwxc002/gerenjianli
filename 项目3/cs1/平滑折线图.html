@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="main" style="width: 600px;height:400px;"></div>
+		    
+		
+		
+		<script src="js/echarts.min.js"></script>
+		<script type="text/javascript">
+		    // 基于准备好的dom，初始化echarts实例
+		    var myChart = echarts.init(document.getElementById('main'));
+				
+		    // 指定图表的配置项和数据
+		    option = {
+		                    //这里的是采用什么方式触发数据，这里显示的竖轴，跟随鼠标移动到节点上会显示内容
+		                    tooltip: {
+		                        trigger: 'axis'
+		                    },
+		                    grid:{
+		                        x:60,
+		                        y:60,
+		                        bottom:100,
+		                        containLabel: true
+		                        // x2:-20,
+		                        // y2:-10,
+		                    },
+		                     
+		                    xAxis: {//代表x轴，这里type类型代表字符
+		                        type: 'category',
+		                        boundaryGap: false,//这里表示是否补齐空白
+		                        axisTick: {
+		                            show:false
+		                        },
+		                        axisLine: {
+		                              show: false,//不显示坐标轴线
+		                        },
+		                        data: ['2000年','', '2000年','', '2000年','', '2000年','','2020年','','2021年'],
+		                        //网格属性
+		                        splitLine: {
+		                            show: true,
+		                            lineStyle:{
+		                                width: 0,
+		                                type: 'dashed'
+		                            }
+		                        },
+		                        axisLabel: {
+		                            interval:0,  
+		                            rotate:0,//文字斜角
+		                        }
+		                    },
+		                    yAxis: [{
+		                        type: 'value',
+		                        axisTick: {
+		                            show:false
+		                        },
+		                        axisLine: {
+		                              show: false,//不显示坐标轴线
+		                        },
+		                        //网格样式
+		                        splitLine: {
+		                            show: true,
+		                            lineStyle:{
+		                                 width: 0,
+		                                 type: 'dashed'
+		                            }
+		                        },
+		                    }],
+		                    //图表类型，type表示按照什么类型图表显示，line代表折线，下面的内容与
+		                    //legend一一对应
+		                    series: [{
+		                        data: [50, 26, 33, 22, 43,30,30, 44, 22, 18,28,42],
+		                        type: 'line',
+		                        // smooth: true,//如果想折线图平滑可以加上这个属性
+		                        showSymbol: true,
+		                        symbolSize:3,
+		                        symbol: 'circle',     //设定为实心点
+		                        hoverAnimation: false,
+		                        itemStyle: {
+		                            normal: {
+		                                areaStyle: {
+		                                    type: 'default',
+		                                    color:'#36403c'
+		                                },
+		                                color: '#384b4a' //改变区域颜色
+		                            }
+		                        },
+		                    },{
+		                        data: [30, 18, 44, 18,28,42,30, 18, 44, 18,28,42],
+		                        type: 'line',
+		                        // smooth: true,//如果想折线图平滑可以加上这个属性
+		                        showSymbol: true,
+		                        symbol: 'circle',     //设定为实心点
+		                        symbolSize:3,
+		                        hoverAnimation: false,
+		                        itemStyle: {
+		                            normal: {
+		                                areaStyle: {
+		                                    type: 'default',
+		                                    color:'#093b62'
+		                                },
+		                                color: '#ff6363' //改变区域颜色
+		                            }
+		                        },
+		                    },
+		                    ]
+		                }
+				
+		    // 使用刚指定的配置项和数据显示图表。
+		    myChart.setOption(option);
+		</script>
+	</body>
+</html>

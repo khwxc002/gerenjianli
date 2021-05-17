@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/csh.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/tablegd.css" rel="stylesheet" />
+	</head>
+	<body onload="startClock()" onunload="stopClock()">
+		<!-- 背景 -->
+		<!-- <div class="bg"> -->
+			<!-- <img src="./img/bg.gif" /> -->
+		<!-- </div> -->
+
+		<div style="width: 1920px;">
+			<!-- 第一层 -->
+			<div>
+				<!-- 标题 -->
+				<div class="bt">
+					<div class="btone">
+						<img src="./img/btbj.png" />
+					</div>
+				</div>
+				<div id="show">
+					<script>
+						var timer = null;
+
+						function displayClock(num) { //num是传入的startClock中的动态值
+							if (num < 10) {
+								return "0" + num;
+							} else {
+								return num;
+							}
+						}
+						//停止计时
+						function stopClock() {
+							clearTimeout(timer);
+						}
+						//开始计时
+						function startClock() {
+							var time = new Date();
+							var hours = displayClock(time.getHours()) + ":";
+							var minutes = displayClock(time.getMinutes()) + ":";
+							var seconds = displayClock(time.getSeconds());
+							var myDate = new Date();
+							show.innerHTML = myDate.getFullYear() + "-" + (myDate.getMonth() + 1) + "-" + myDate.getDate() + " " + hours +
+								minutes + seconds;
+							timer = setTimeout("startClock()", 1000);
+						}
+					</script>
+				</div>
+				<!-- 计时器 -->
+			</div>
+			<!-- 第二层 -->
+			<div class="nr1">
+				<!-- 收件情况 -->
+				<div class="nr1one">
+					<!-- <img src="./img/sjqk.png" /> -->
+					<div class="nr1onez">
+						<div class="nr1onezbt">
+							<b class="nr1onezbtb">收件情况</b>
+						</div>
+						<div class="nr1onez0">
+							<span class="nr1onez0s1">今年</span>
+							<span class="nr1onez0s2">累计</span>
+						</div>
+						<div class="nr1onez1">
+							<span class="nr1onezspan1">26839</span>
+							<span class="nr1onezspan3">移动端</span>
+							<span class="nr1onezspan2">102757</span>
+						</div>
+						<div class="nr1onez2">
+							<span class="nr1onezspan1">7858585</span>
+							<span class="nr1onezspan3">网页端</span>
+							<span class="nr1onezspan2">1506439</span>
+						</div>
+						<div class="nr1onez3">
+							<span class="nr1onezspan1">28559</span>
+							<span class="nr1onezspan3">窗口端</span>
+							<span class="nr1onezspan2">31780</span>
+
+						</div>
+					</div>
+				</div>
+				<!-- 实时动态 -->
+				<div class="nr1two">
+					<!-- <img src="./img/ssdt.png" /> -->
+					<div class="nr1twoz">
+						<div class="nr1twozbt">
+							<b class="nr1twozbtb">
+								实时动态
+							</b>
+						</div>
+						<div class="nr1twoz1">
+							<span style="margin: 0px 0px 0px 60px;">2475</span>
+							<span style="margin: 0px 0px 0px 50px;">820</span>
+							<span style="margin: 0px 0px 0px 65px;">980</span>
+							<span style="margin: 0px 0px 0px 65px;">119</span>
+						</div>
+						<div class="nr1twoz2">
+							<span style="margin: 0px 0px 0px 60px;">27264</span>
+							<span style="margin: 0px 0px 0px 50px;">86.5%</span>
+							<span style="margin: 0px 0px 0px 65px;">19628</span>
+							<span style="margin: 0px 0px 0px 65px;">72%</span>
+						</div>
+						<div class="nr1twoz3">
+							<span style="margin: 0px 0px 0px 190px;">692349</span>
+							<span style="margin: 0px 0px 0px 150px;">12757</span>
+						</div>
+					</div>
+				</div>
+				<!-- 好评率 -->
+				<div class="nr1three">
+					<!-- <img src="./img/pj.png" /> -->
+					<div class="nr1threez">
+						<div class="nr1threez0">
+							<b class="nr1threez0b">好评率</b>
+						</div>
+						<div class="nr1threez1">
+							<span style="margin: 0px 0px 0px 105px;">21548</span>
+							<span style="margin: 0px 0px 0px 75px;">99.8%</span>
+						</div>
+						<div class="nr1threez2">
+							<span style="margin: 33px 0px 0px 35px;">16500</span>
+							<span style="margin: 33px 0px 0px 0px;">850</span>
+							<span style="margin: 33px 0px 0px 0px;">1500</span>
+							<span style="margin: 33px 0px 0px 0px;">1</span>
+							<span style="margin: 33px 0px 0px 0px;">0</span>
+						</div>
+						<div class="nr1threez3">
+							<span style="margin: 7px 0px 0px 46px;display: block;float: left;">
+								<img src="img/myd/fcmy.png" />
+							</span>
+							<span style="margin: 7px 0px 0px 20px;display: block;float: left;">
+								<img src="img/myd/my.png" />
+							</span>
+							<span style="margin: 7px 0px 0px 20px;display: block;float: left;">
+								<img src="img/myd/jbmy.png" />
+							</span>
+							<span style="margin: 7px 0px 0px 20px;display: block;float: left;">
+								<img src="img/myd/bmy.png" />
+							</span>
+							<span style="margin: 7px 0px 0px 20px;display: block;float: left;">
+								<img src="img/myd/fcbmy.png" />
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 第三层 -->
+			<div class="nr2">
+				<!-- 部门办件排行榜 -->
+				<div class="nr2one">
+					<!-- <img src="./img/bmbj.png" /> -->
+					<div class="nr2onez">
+						<div class="nr2onezbt">
+							<b class="nr2onezbtb">
+								部门办件排行榜
+							</b>
+						</div>
+						<div class="nr2onezbmbt">
+							<span class="nr2onezbmbts1">部门</span>
+							<span class="nr2onezbmbts2">收件量</span>
+							<span class="nr2onezbmbts3">办结量</span>
+						</div>
+						<div class="tablebox">
+							<div class="tbl-body">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<thead>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 地图 -->
+				<div class="nr2two">
+					<img src="./img/dt.png" />
+					<div id="dt">
+						<div style="position: absolute;display: none;left: 619px;top: 95px;">
+							<img src="img/1.png" />
+							<b style="display: block;float: left;color: #FFFFFF;position: absolute;top:1px;left: 55px;">
+								<img src="img/xz.png">
+								<b id="biaoti"
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									九龙湖镇
+								</b>
+							</b>
+							<span id="shijians" style="display: none;">
+								<b id="shijiansb1">1</b>
+								<b id="shijiansm1">九龙湖镇事件1</b>
+								<b id="shijiansbf1">100</b>
+								<b id="shijiansz1">120</b>
+								<b id="shijiansb2">2</b>
+								<b id="shijiansm2">九龙湖镇事件2</b>
+								<b id="shijiansbf2">90</b>
+								<b id="shijiansz2">100</b>
+								<b id="shijiansb3">3</b>
+								<b id="shijiansm3">九龙湖镇事件3</b>
+								<b id="shijiansbf3">80</b>
+								<b id="shijiansz3">90</b>
+								<b id="shijiansb4">4</b>
+								<b id="shijiansm4">九龙湖镇事件4</b>
+								<b id="shijiansbf4">70</b>
+								<b id="shijiansz4">80</b>
+							</span>
+						</div>
+						<div style="position: absolute;display: none;left: 1005px;top: 253px;">
+							<img src="img/2.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-30px;left: 18px;">
+								<img src="img/xz.png">
+								<b id="biaoti"
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									蛟川街道
+								</b>
+							</b>
+							<span id="shijians" style="display: none;">
+								<b id="shijiansb1">1</b>
+								<b id="shijiansm1">蛟川街道事件1</b>
+								<b id="shijiansbf1">80</b>
+								<b id="shijiansz1">70</b>
+								<b id="shijiansb2">2</b>
+								<b id="shijiansm2">蛟川街道事件2</b>
+								<b id="shijiansbf2">90</b>
+								<b id="shijiansz2">100</b>
+								<b id="shijiansb3">3</b>
+								<b id="shijiansm3">蛟川街道事件3</b>
+								<b id="shijiansbf3">80</b>
+								<b id="shijiansz3">90</b>
+								<b id="shijiansb4">4</b>
+								<b id="shijiansm4">蛟川街道事件4</b>
+								<b id="shijiansbf4">70</b>
+								<b id="shijiansz4">80</b>
+							</span>
+						</div>
+						<div style="position: absolute;display: none;left: 813px;top: 226px;">
+							<img src="img/3.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-30px;left: 0px;">
+								<img src="img/xz.png">
+								<b id="biaoti"
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									骆驼街道
+								</b>
+							</b>
+							<span id="shijians" style="display: none;">
+								<b id="shijiansb1">1</b>
+								<b id="shijiansm1">九龙湖镇事件1</b>
+								<b id="shijiansbf1">100</b>
+								<b id="shijiansz1">120</b>
+								<b id="shijiansb2">2</b>
+								<b id="shijiansm2">九龙湖镇事件2</b>
+								<b id="shijiansbf2">90</b>
+								<b id="shijiansz2">100</b>
+								<b id="shijiansb3">3</b>
+								<b id="shijiansm3">九龙湖镇事件3</b>
+								<b id="shijiansbf3">80</b>
+								<b id="shijiansz3">90</b>
+								<b id="shijiansb4">4</b>
+								<b id="shijiansm4">九龙湖镇事件4</b>
+								<b id="shijiansbf4">70</b>
+								<b id="shijiansz4">80</b>
+							</span>
+						</div>
+						<div style="position: absolute;display: none;left: 857px;top: 79px;">
+							<img src="img/4.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-10px;left: 45px;">
+								<img src="img/xz.png">
+								<b id="biaoti"
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									澥浦镇
+								</b>
+							</b>
+							<span id="shijians" style="display: none;">
+								<b id="shijiansb1">1</b>
+								<b id="shijiansm1">九龙湖镇事件1</b>
+								<b id="shijiansbf1">50</b>
+								<b id="shijiansz1">100</b>
+								<b id="shijiansb2">2</b>
+								<b id="shijiansm2">九龙湖镇事件2</b>
+								<b id="shijiansbf2">90</b>
+								<b id="shijiansz2">100</b>
+								<b id="shijiansb3">3</b>
+								<b id="shijiansm3">九龙湖镇事件3</b>
+								<b id="shijiansbf3">80</b>
+								<b id="shijiansz3">90</b>
+								<b id="shijiansb4">4</b>
+								<b id="shijiansm4">九龙湖镇事件4</b>
+								<b id="shijiansbf4">70</b>
+								<b id="shijiansz4">80</b>
+							</span>
+						</div>
+						<div style="position: absolute;display: none;left: 1126px;top: 298px;">
+							<img src="img/5.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-70px;left: -10px;">
+								<img src="img/xz.png">
+								<b id="biaoti"
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									招宝山街道
+								</b>
+							</b>
+							<span id="shijians" style="display: none;">
+								<b id="shijiansb1">1</b>
+								<b id="shijiansm1">九龙湖镇事件1</b>
+								<b id="shijiansbf1">40</b>
+								<b id="shijiansz1">80</b>
+								<b id="shijiansb2">2</b>
+								<b id="shijiansm2">九龙湖镇事件2</b>
+								<b id="shijiansbf2">90</b>
+								<b id="shijiansz2">100</b>
+								<b id="shijiansb3">3</b>
+								<b id="shijiansm3">九龙湖镇事件3</b>
+								<b id="shijiansbf3">80</b>
+								<b id="shijiansz3">90</b>
+								<b id="shijiansb4">4</b>
+								<b id="shijiansm4">九龙湖镇事件4</b>
+								<b id="shijiansbf4">70</b>
+								<b id="shijiansz4">80</b>
+							</span>
+						</div>
+						<div style="position: absolute;display: none;left: 926px;top: 357px;">
+							<img src="img/6.png" />
+							<b
+								style="display: block;float: left;color: #FFFFFF;position: absolute;top:-45px;left: -10px;">
+								<img src="img/xz.png">
+								<b id="biaoti"
+									style="display: block;position: absolute;top: 1px;width: 157px;height: 65px;text-align: center;line-height: 65px;">
+									庄市街道
+								</b>
+							</b>
+							<span id="shijians" style="display: none;">
+								<b id="shijiansb1">1</b>
+								<b id="shijiansm1">九龙湖镇事件1</b>
+								<b id="shijiansbf1">60</b>
+								<b id="shijiansz1">110</b>
+								<b id="shijiansb2">2</b>
+								<b id="shijiansm2">九龙湖镇事件2</b>
+								<b id="shijiansbf2">90</b>
+								<b id="shijiansz2">100</b>
+								<b id="shijiansb3">3</b>
+								<b id="shijiansm3">九龙湖镇事件3</b>
+								<b id="shijiansbf3">80</b>
+								<b id="shijiansz3">90</b>
+								<b id="shijiansb4">4</b>
+								<b id="shijiansm4">九龙湖镇事件4</b>
+								<b id="shijiansbf4">70</b>
+								<b id="shijiansz4">80</b>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- 办件量 -->
+				<div class="nr2three">
+					<!-- <img src="./img/9ljdbss.png" /> -->
+					<div class="nr2threebt"><b id="nr2threebt">九龙街道</b><b>办件量</b></div>
+					<div class="nr2threez">
+						<div class="nr2threezt">
+							<div class="nr2threeztbh" id="nr2threeztbh">1</div>
+							<div class="nr2threeztpxnr">
+								<span id="nr2threeztpxnr" style="line-height: 20px;">事件名称1</span>
+								<span class="nr2threezs1" id="nr2threezs1">
+									<!-- <img  src="img/jdt.png"/> -->
+								</span>
+							</div>
+							<div class="nr2threeztsz" id="nr2threeztsz">100</div>
+							<div style="clear: both;"></div>
+						</div>
+						<div class="nr2threezt">
+							<div class="nr2threeztbh">2</div>
+							<div class="nr2threeztpxnr">
+								<span style="line-height: 20px;">事件名称1</span>
+								<span class="nr2threezs2">
+									<!-- <img  src="img/jdt.png"/> -->
+								</span>
+							</div>
+							<div class="nr2threeztsz">90</div>
+							<div style="clear: both;"></div>
+						</div>
+						<div class="nr2threezt">
+							<div class="nr2threeztbh">3</div>
+							<div class="nr2threeztpxnr">
+								<span style="line-height: 20px;">事件名称1</span>
+								<span class="nr2threezs3">
+									<!-- <img  src="img/jdt.png"/> -->
+								</span>
+							</div class="nr2threeztpxnr">
+							<div class="nr2threeztsz">80</div>
+							<div style="clear: both;"></div>
+						</div>
+						<div class="nr2threezt">
+							<div class="nr2threeztbh">4</div>
+							<div class="nr2threeztpxnr">
+								<span style="line-height: 20px;">事件名称1</span>
+								<span class="nr2threezs4">
+									<!-- <img  src="img/jdt.png"/> -->
+								</span>
+							</div>
+							<div class="nr2threeztsz">70</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/jq.js"></script>
+		<script src="./js/slunbo.js"></script>
+		<script src="./js/tablegd.js"></script>
+	</body>
+</html>

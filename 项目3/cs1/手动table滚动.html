@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>  
+    <head>  
+    <style type="text/css">  
+        /*所有内容都在这个DIV内*/  
+        div.all {  
+            border: 3px solid #FF00FF;  
+            width: 80%; /*这个宽度可根据实际需要改变*/  
+            clear: right;  
+        }  
+          
+        /*表头在这个DIV内*/  
+        div.title {  
+            width: 100%;  
+        }  
+        /*内容在这个DIV内*/  
+        div.content {  
+            width: 100%;  
+            overflow: scroll;  /*总是显示滚动条*/  
+            overflow-x: hidden; /*去掉横向滚动条*/  
+            height: 100px;  
+        }  
+        div.title_left {  
+            float: left;  
+            margin-right: 17px;  
+        }  
+        div.content_left {  
+            float: left;  
+        }  
+          
+        .main_table {  
+            width: 100%;  
+            border: 1px solid #FF00FF;  
+            border-collapse: collapse;  /*边线与旁边的合并*/    
+            table-layout:fixed;  
+        }  
+        .main_table tr th {    
+            border: 1px solid #FF00FF;    
+            overflow: hidden;  /*超出长度的内容不显示*/    
+            /*word-wrap: break-word;  内容将在边界内换行,这里显示省略号,所以不需要了*/    
+            word-break: break-all;  /*字内断开*/    
+            text-overflow: ellipsis;  /*当对象内文本溢出时显示省略标记（…），省略标记插入的位置是最后一个字符*/    
+            white-space: nowrap;    
+        }    
+        /*单元格样式*/    
+        .main_table tr td {    
+            border: 1px solid #FF00FF;    
+            overflow: hidden;    
+            /*word-wrap: break-word;  内容将在边界内换行,这里显示省略号,所以不需要了*/    
+            word-break: break-all;    
+            text-overflow: ellipsis;    
+            white-space: nowrap;    
+        }    
+    </style>  
+    </head>  
+    <body>  
+        <div class="all">  
+            <div class="title">  
+                <div class="title_left">  
+                <table class="main_table">  
+                    <tr>  
+                        <th>aaa</th><th style="width:30%">aaa</th><th>ccc</th><th>bbb</th>  
+                    </tr>  
+                </table>  
+                </div>  
+            </div>  
+            <div class="content">  
+                <div class="content_left">  
+                <table class="main_table">  
+                    <tr>  
+                        <td>aaa</td><td style="width:30%">aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                    <tr>  
+                        <td>aaa</td><td>aaa</td><td>ccc</td><td>bbb</td>  
+                    </tr>  
+                </table>  
+                </div>  
+            </div>  
+        </div>  
+    </body>  
+</html> 

@@ -1,0 +1,7 @@
+配置环境安装
+
+npm install superagent
+npm install cheerio
+npm install eventproxy
+npm install async
+npm install mkdirp

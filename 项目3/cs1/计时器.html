@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jq.js"></script>
+	</head>
+	<body>
+		<div id="show">
+			<script>
+				var timer = null;
+
+				function displayClock(num) { //num是传入的startClock中的动态值
+					if (num < 10) {
+						return "0" + num;
+					} else {
+						return num;
+					}
+				}
+				//停止计时
+				function stopClock() {
+					clearTimeout(timer);
+				}
+				//开始计时
+				function startClock() {
+					var time = new Date();
+					var hours = displayClock(time.getHours()) + ":";
+					var minutes = displayClock(time.getMinutes()) + ":";
+					var seconds = displayClock(time.getSeconds());
+					var myDate = new Date();
+					show.innerHTML = myDate.getFullYear() + "-" + (myDate.getMonth() + 1) + "-" + myDate.getDate() + " " + hours +
+						minutes + seconds;
+					timer = setTimeout("startClock()", 1000);
+				}
+			</script>
+		</div>
+		<!-- 计时器 -->
+	</body>
+</html>

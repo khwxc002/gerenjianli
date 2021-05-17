@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'bb_chart.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<script type="text/javascript" src="./js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="./js/highcharts.js"></script>
+    <!-- 
+    <script type="text/javascript" src="js/theme/gray.js"></script>
+    <script type="text/javascript" src="js/theme/dark-blue.js"></script>
+    <script type="text/javascript" src="js/theme/dark-green.js"></script>
+    -->
+    <script type="text/javascript" src="./js/theme/grid.js"></script>
+    
+    
+
+  </head>
+  
+  <body>
+    <div id="container">
+    </div>
+    <div id="container2">
+    </div>
+    <div id="container3">
+    </div>
+    <div id="container7">
+    </div>
+    <div id="container4">
+    </div>
+    <div id="container5">
+    </div>
+    <div id="container6">
+    </div>
+    
+    <div id="container8">
+    </div>
+    <div id="container9">
+    </div>
+    <div id="container10">
+    </div>
+  </body>
+</html>
+<script>
+var chart;
+$(document).ready(function() {
+//折线图示例
+    chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',          //放置图表的容器
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            defaultSeriesType: 'line'   
+        },
+        title: {
+            text: 'JQuery曲线图演示'
+        },
+        subtitle: {
+            text: '副标题'
+        },
+        xAxis: {//X轴数据
+            categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份'],
+            labels: {
+                rotation: -45, //字体倾斜
+                align: 'right',
+                style: { font: 'normal 13px 宋体' }
+            }
+        },
+        yAxis: {//Y轴显示文字
+            title: {
+                text: '产量/百万'
+            }
+        },
+        tooltip: {
+            enabled: true,
+            formatter: function() {
+                return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1);
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true//是否显示title
+            }
+        },
+        series: [{
+            name: '杭州',
+            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+            name: '江西',
+            data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6]
+        }, {
+            name: '北京',
+            data: [14.0, 12.9, 15.5, 14.5, 28.4, 21.5, 15.2, 16.5, 13.3, 28.3, 13.9, 13.6]
+        }, {
+            name: '湖南',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+		}]
+    });
+//柱状图图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container2',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'column'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery柱状图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '杭州',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '江西',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }, {
+                    name: '湖南',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, 9.6, 9.6]
+                }]
+              });
+//饼状图图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container3',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'pie'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery饼状图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                   data: [
+                        ['杭州', 45.0],
+                        ['江西', 26.8],
+                        { name: '湖南', y: 12.8, sliced: true, selected: true }, //选中状态
+                        ['北京', 8.5],
+                        ['上海', 6.2],
+                        ['深圳', 0.7]
+                     ]
+                }]
+              });
+//spline 平滑曲线图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container4',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'spline'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery spline平滑曲线图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '杭州',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '江西',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }, {
+                    name: '湖南',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, 9.6, 9.6]
+                }]
+              });
+//area 填充图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container5',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'area'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery area填充图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '杭州',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '江西',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }, {
+                    name: '湖南',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, 9.6, 9.6]
+                }]
+              });
+//areaspline 填充图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container6',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'areaspline'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery areaspline填充图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '杭州',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '江西',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }, {
+                    name: '湖南',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, 9.6, 9.6]
+                }]
+              });
+//bar 图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container7',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'bar'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery bar 增长图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '杭州',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '江西',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }, {
+                    name: '湖南',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, 9.6, 9.6]
+                }]
+              });
+//scatter 点位图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container8',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'scatter'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: 'JQuery scatter 点位图演示'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份', '十三月份', '十四月份'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '产量/百万'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) + "百万";
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '杭州',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '江西',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }, {
+                    name: '湖南',
+                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8, 9.6, 9.6]
+                }]
+              });
+}); 
+</script>

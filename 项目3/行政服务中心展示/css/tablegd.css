@@ -1,0 +1,46 @@
+.tablebox {
+	height: 360px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	margin: 100px auto;
+	top: -30px;
+	left: 10px;
+}
+
+
+.tbl-body {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.tablebox table {
+	width: 100%;
+}
+
+.tablebox table th,
+.tablebox table td {
+	font-size: 24px;
+	color: #7ca6f4;
+	line-height: 45px;
+	text-align: center;
+}
+
+.tablebox table tr th {
+	cursor: pointer;
+}
+
+.tablebox table tr td {
+	background-color: transparent;
+}
+
+.tbl-body tr:nth-child(even) td,
+.tbl-body1 tr:nth-child(even) td {
+}
+
+.tablebox table tr td span,
+.tablebox table tr td span {
+	font-size: 24px;
+}
